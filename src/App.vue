@@ -1,26 +1,28 @@
 <script setup lang="ts">
-import GhostSidebar from './components/GhostSidebar.vue';
+import GhostLeftwindow from './components/GhostElements/GhostLeftwindow.vue';
+import GhostBottomwindow from './components/GhostElements/GhostBottomwindow.vue';
+import InventoryField from './components/inventory/InventoryField.vue';
 </script>
 
 <template>
-<GhostSidebar />
+  <div class="main-container">
+    <div class="top-container">
+      <GhostLeftwindow />
+      <InventoryField />
+    </div>
+    <div class="bottom-container">
+      <GhostBottomwindow />
+    </div>
+  </div>
+
 </template>
 
-<style scoped>
-#app {
-  width: 100vw;
-  height: 100vh;
+<style lang="scss" scoped>
+.top-container {
+  display: flex;
 }
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.bottom-container {
+  width: 100%;
 }
 </style>

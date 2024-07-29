@@ -1,11 +1,8 @@
 <template>
   <div class="ghost-element">
-    <div class="ghost-header"></div>
     <div class="ghost-content">
       <div class="ghost-image"></div>
-      <div class="ghost-text-line"></div>
-      <div class="ghost-text-line"></div>
-      <div class="ghost-text-line"></div>
+      <div v-for="line in 7" class="ghost-text-line"></div>
     </div>
   </div>
 </template>
@@ -17,21 +14,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$ghost-bg-color: #e0e0e0;
-$ghost-border-radius: 4px;
+$ghost-bg-color: #262626;
+$ghost-br-color: #4D4D4D;
+$ghost-border-radius: 8px;
 
 .ghost-element {
-  width: 300px;
+  margin-right: 20px;
+  width: 236px;
   padding: 20px;
-  border: 1px solid $ghost-bg-color;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  height: 458px;
+  border: 1px solid $ghost-br-color;
+  border-radius: 12px;
+  background-color: $ghost-bg-color;
 
   .ghost-header {
     height: 20px;
     width: 80%;
-    background-color: $ghost-bg-color;
+    background-color: $ghost-br-color;
     border-radius: $ghost-border-radius;
+    margin: auto;
     margin-bottom: 20px;
   }
 
@@ -39,19 +40,22 @@ $ghost-border-radius: 4px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 
     .ghost-image {
-      height: 100px;
-      width: 100px;
-      background-color: $ghost-bg-color;
+      height: 240px;
+      width: 208px;
+      object-fit: fill;
+      background-color: $ghost-br-color;
       border-radius: 8px;
       margin-bottom: 20px;
+      background-image: url('src/assets/imgs/ghostImg.png');
     }
 
     .ghost-text-line {
       height: 20px;
       width: 100%;
-      background-color: $ghost-bg-color;
+      background-color: $ghost-br-color;
       border-radius: $ghost-border-radius;
 
       &:nth-child(2) {
