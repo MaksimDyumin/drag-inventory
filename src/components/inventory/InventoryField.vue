@@ -31,7 +31,7 @@ function onDrop(e: DragEvent) {
 function onItemDrop(e: DragEvent, targetField: any) {
   const droppedData = e.dataTransfer?.getData('text/plain');
   if (droppedData && draggedItem.value) {
-    const droppedItem = JSON.parse(droppedData);
+    // const droppedItem = JSON.parse(droppedData);
 
     const draggedIndex = fields.value.findIndex(item => item.id === draggedItem.value.id);
     const targetIndex = fields.value.findIndex(item => item.id === targetField.id);

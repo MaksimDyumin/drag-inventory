@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/types": "^7.25.0",
     "pinia": "^2.2.0",
     "vue": "^3.4.31"
   },

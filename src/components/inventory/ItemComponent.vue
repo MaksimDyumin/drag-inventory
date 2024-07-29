@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Field } from '@/useApi/useApi.types';
+import type { Field } from '../../useApi/useApi.types';
 import { computed } from 'vue';
 
 const props = defineProps<{ field: Field, width: number, height: number, translate: number }>();

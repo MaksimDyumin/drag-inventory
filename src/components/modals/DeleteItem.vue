@@ -6,7 +6,7 @@
 
       <div class="ghost-line-container">
         <div class="line"></div>
-        <div v-for="line in 6" class="ghost-text-line"></div>
+        <div v-for=" in 6" class="ghost-text-line"></div>
       </div>
       <div class="line"></div>
       <button @click="selectCount = !selectCount" v-if="!selectCount">Удалить предмет</button>
@@ -29,7 +29,6 @@ import { Field, ItemTypes } from '../../useApi/useApi.types';
 import { useFieldsStore } from '../../store/fields';
 
 
-const fieldsStore = useFieldsStore()
 const modalStore = useModalWindowStore()
 const props = defineProps<{ field: Field }>();
 
