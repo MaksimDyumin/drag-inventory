@@ -26,7 +26,6 @@ import { computed, ref } from 'vue';
 import { useModalWindowStore } from '../../store/modal';
 import ItemComponent from '../inventory/ItemComponent.vue';
 import { Field, ItemTypes } from '../../useApi/useApi.types';
-import { useFieldsStore } from '../../store/fields';
 
 
 const modalStore = useModalWindowStore()
