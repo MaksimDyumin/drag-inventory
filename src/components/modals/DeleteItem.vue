@@ -42,7 +42,7 @@ function deleteItems() {
     modalStore.hideModal()
     return
   }
-  if (intValue > field.value.quantity) {
+  if (intValue >= field.value.quantity) {
     field.value.quantity = 0
     field.value.typeItem = ItemTypes.withoutItem
     modalStore.hideModal()
