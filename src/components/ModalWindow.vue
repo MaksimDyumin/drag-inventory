@@ -21,24 +21,25 @@ const modalWindowStor = useModalWindowStore()
   text-align: center;
   min-width: 50px;
   min-height: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
   z-index: 4;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3 ease;
   background-color: rgba(38, 38, 38, 0.9);
 }
 
-.modalWindow-enter-active,
-.modalWindow-leave-active {
-  opacity: 1;
-}
 
-.modalWindow-enter-from,
+.modalWindow-leave-active {}
+
+.modalWindow-enter-to {}
+
+.modalWindow-enter-from {
+  transform: translate(300px);
+}
 .modalWindow-leave-to {
-  opacity: 0;
+  transform: translate(300px);
 }
 </style>
